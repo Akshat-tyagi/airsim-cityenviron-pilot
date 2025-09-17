@@ -57,6 +57,25 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom HUD colors
+        hud: {
+          primary: "hsl(var(--hud-primary))",
+          secondary: "hsl(var(--hud-secondary))",
+          accent: "hsl(var(--hud-accent))",
+          warning: "hsl(var(--hud-warning))",
+          danger: "hsl(var(--hud-danger))",
+          success: "hsl(var(--hud-success))",
+        },
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-glow': 'var(--gradient-glow)',
+        'gradient-panel': 'var(--gradient-panel)',
+      },
+      boxShadow: {
+        'glow-primary': 'var(--glow-primary)',
+        'glow-secondary': 'var(--glow-secondary)',
+        'panel': 'var(--shadow-panel)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +99,39 @@ export default {
             height: "0",
           },
         },
+        "pulse-glow": {
+          "0%, 100%": {
+            opacity: "1",
+            boxShadow: "var(--glow-primary)",
+          },
+          "50%": {
+            opacity: "0.7",
+            boxShadow: "var(--glow-secondary)",
+          },
+        },
+        "scan-line": {
+          "0%": {
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            transform: "translateY(400px)",
+          },
+        },
+        "data-stream": {
+          "0%": {
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            transform: "translateX(100%)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "scan-line": "scan-line 3s linear infinite",
+        "data-stream": "data-stream 2s linear infinite",
       },
     },
   },
